@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Search</title>
+        <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        .links-container {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+            }
+
+        .link {
+            text-decoration: none;
+        }
+
+        </style>
+        <script>
+        function doLuckySearch() {
+            var form = document.getElementById("search-form");
+            form.action = "https://google.com/search";
+            form.querySelector('input[name="btnI"]').value = "1";
+            form.submit();
+        }
+        </script>
+    </head>
+    <body>
+        <div class="links-container">
+            <a class="link" href="/picture">Google Image Search</a>
+            <a class="link" href="/advanced">Google Advanced Search</a>
+        </div>
+
+        <form action="https://google.com/search" method="get">
+            <input type="text" name="q">
+            <input type="hidden" name="btnI" value="0">
+            <input type="submit" value="Google Search">
+            <button onclick="doLuckySearch()">I‘m feeling lucky</button>
+        </form>
+    </body>
+</html>

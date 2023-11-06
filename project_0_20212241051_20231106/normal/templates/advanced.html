@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0 auto;
+            }
+
+
+            .links-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-bottom: 10px;
+            }
+
+            .link {
+                text-decoration: none;
+                padding: 5px 10px;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="links-container">
+            <a class="link" href="/normal">Google Search</a>
+        </div>
+        <form action="https://www.google.com/advanced_search" method="get">
+            <label for="search-input">All these words:</label>
+            <input type="text" id="search-input" name="q">
+
+            <label for="exact-phrase">Exact word or phrase:</label>
+            <input type="text" id="exact-phrase" name="as_epq">
+
+            <label for="any-word">Any of these words:</label>
+            <input type="text" id="any-word" name="as_oq">
+
+            <label for="exclude-words">None of these words:</label>
+            <input type="text" id="exclude-words" name="as_eq">
+
+            <input type="submit" value="Google Advanced Search" style="background-color: blue; color: white;">
+        </form>
+    </body>
+</html>
